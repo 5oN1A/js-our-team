@@ -36,7 +36,6 @@ let team = [
 
 const cardContainer = document.querySelector(".team-container");
 
-const formContainer = document.querySelector("form-container");
 const newMemberBtn = document.getElementById("add-btn");
 let newName = document.getElementById("name");
 let newRole = document.getElementById("role");
@@ -81,6 +80,7 @@ function printCard(user) {
 newMemberBtn.addEventListener("click", function() {
    
 
+
     let newCard
 
     const cardName = newName.value;
@@ -98,6 +98,8 @@ newMemberBtn.addEventListener("click", function() {
    console.log(team);
    printCard(newCard);
 
-
+   newName.value = "";
+   newRole.value = "";
+   newImg.value = "";
 })
 
